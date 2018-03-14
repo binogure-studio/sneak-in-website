@@ -87,7 +87,7 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -143,7 +143,13 @@ a:hover {
   #google-play-button {
     width: 300px;
   }
-  
 }
 
-/* b9c462 */
+.cellphone {
+  background-position: center;
+  background-size: auto;
+  background-image: url('../img/cellphone.png');
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 50px;
+}
