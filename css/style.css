@@ -1,0 +1,149 @@
+@font-face {
+  font-family: Simple Print Bold;
+  src: url("../font/simple-print_bold.ttf");
+}
+
+@font-face {
+  font-family: Simple Print;
+  src: url("../font/simple-print_regular.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f2;
+  font: 400 24px/1.8 "Simple Print", sans-serif;
+  color: #5a412b;
+  overflow-x: hidden;
+}
+
+#background-main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/background-0.png');
+  background-repeat: no-repeat;
+
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#background-1 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#background-2 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 350px;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/background-2.png');
+  background-repeat: no-repeat;
+
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#background-3 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#sneakin-title {
+  background-position: center;
+  background-size: auto;
+  width: 100%;
+  height: 50%;
+  background-image: url('../img/sneak-in-big.png');
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.small-title {
+  font-size: 36px;
+}
+
+.text {
+  font-size: 28px;
+}
+
+.content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright {
+  color: gray;
+  font-size: 20px;
+}
+
+a:link, a:visited, a:active {
+  color: gray;
+}
+
+a:hover {
+  color: black;
+}
+
+.footer {
+  font-size: 26px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-weight: 600; 
+}
+
+#catch-phrase-0 {
+  width: 100%;
+  height: 10%;
+  font-size: 72px;
+}
+
+#google-play-button {
+  width: 450px;
+}
+
+@media only screen and (max-width: 800px) {
+  #sneakin-title {
+    background-position: center;
+    background-size: auto;
+    width: 100%;
+    height: 50%;
+    background-image: url('../img/sneak-in-small.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+  #catch-phrase-0 {
+    width: 100%;
+    height: 10%;
+    font-size: 36px;
+  }
+
+  #google-play-button {
+    width: 300px;
+  }
+  
+}
+
+/* b9c462 */
