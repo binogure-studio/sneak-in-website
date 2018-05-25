@@ -1,0 +1,194 @@
+<html>
+<head>
+  <title>Sneak In - Marble Shooter Game</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="Sneak In is a challenging and addictive marbles shooter games !">
+  <meta name="keywords" content="sneak in,snake,shooter,game,zuma,puzzle,action">
+
+  <!--  Essential META Tags -->
+  <meta name="twitter:site" content="@binogure" />
+  <meta property="og:title" content="Sneak In - The Marble Shooter Game">
+  <meta property="og:description" content="Sneak In is a challenging and addictive marbles games !">
+  <meta property="og:image" content="http://www.binogure-studio.com/sneak-in-website/img/image-alt.png">
+  <meta property="og:url" content="www.binogure-studio.com/sneak-in-website/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--  Non-Essential, But Recommended -->
+  <meta name="twitter:image:alt" content="Sneak In is a challenging and addictive marbles games !">
+  <meta property="og:site_name" content="Sneak In - The Marble Shooter Game">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/sneak-in-website/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="manifest" href="/sneak-in-website/manifest-score.json">
+
+  <script>
+function getQueryStringValue (key) {  
+  return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+}
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max)
+}
+
+function updateContent() {
+  var stars = [
+    "img/star-0.png",
+    "img/star-1.png",
+    "img/star-2.png",
+    "img/star-3.png",
+  ]
+
+  var message = getQueryStringValue("message")
+  var medal = parseInt(getQueryStringValue("medal"))
+  var contentDiv = document.getElementById("content")
+  var starDiv = document.getElementById("star")
+
+  if (message == "" || medal == "") {
+    medal = 3
+    message = "Come play Sneak In !"
+  }
+
+  medal = clamp(medal, 0, stars.length - 1)
+
+  contentDiv.innerHTML = "<span>" + message + "</span>"
+  starDiv.innerHTML = "<img src=\"" + stars[medal] + "\" alt=\"Medal\" />"
+
+}
+
+  </script>
+  <style>
+    @font-face {
+      font-family: Simple Print Bold;
+      src: url("font/simple-print_bold.ttf");
+    }
+
+    @font-face {
+      font-family: Simple Print;
+      src: url("font/simple-print_regular.ttf");
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f4f4f2;
+      font: 400 24px/1.8 "Simple Print", sans-serif;
+      color: #5a412b;
+      overflow-x: hidden;
+    }
+
+    #background-main {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-attachment: scroll;
+      background-position: center;
+      background-size: cover;
+      background-image: url('img/score-background.png');
+      background-repeat: no-repeat;
+
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    .content {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 40%;
+      font-size: 44px;
+      font-weight: 600;
+    }
+
+    .star {
+      width: auto;
+      height: auto;
+      padding-top: 8%;
+      padding-bottom: 10%;
+      transform: scale(1.75);
+    }
+
+    @media only screen and (orientation:portrait) {
+      .star {
+        width: auto;
+        height: auto;
+        transform: scale(1.0);
+        padding-top: 0;
+        padding-bottom: 15%;
+      }
+
+      .content {
+        position: absolute;
+        margin: auto;
+        top: 10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 90%;
+        height: 40%;
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+
+    @media screen and (orientation:landscape) and (max-width: 1000px) {
+      .content {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 40%;
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      .star {
+        width: auto;
+        height: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        transform: scale(1.25);
+      }
+    }
+
+    @media screen and (orientation:landscape) and (max-width: 800px) {
+      .content {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 40%;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .star {
+        width: auto;
+        height: auto;
+        padding: 0;
+        transform: scale(0.75);
+      }
+    }
+  </style>
+</head>
+<body onload="javascript: updateContent()">
+    <div id="background-main">
+      <div class="content">
+        <div id="star" class="star"></div>
+        <div id="content"></div>
+      </div>
+    </div>
+</body>
+</html>

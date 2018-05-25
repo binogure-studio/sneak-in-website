@@ -1,0 +1,21 @@
+{
+  "short_name": "Sneak In",
+  "name": "Sneak In - Marble Shooter Game",
+  "start_url": "/sneak-in-website/score.html",
+  "icons": [
+    {
+      "src": "/sneak-in-website/img/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "org.binogurestudio.sneakin"
+    }
+  ],
+  "display": "fullscreen",
+  "orientation": "landscape"
+}
