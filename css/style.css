@@ -20,6 +20,7 @@ body {
 .responsive {
   max-width: 100%;
   height: auto;
+  border-radius: 32px;
 }
 
 #background-main {
@@ -130,7 +131,6 @@ a:hover {
 .cellphone {
   background-position: center;
   background-size: auto;
-  background-image: url('../img/cellphone.png');
   background-repeat: no-repeat;
   margin: 0;
   padding: 50px;
